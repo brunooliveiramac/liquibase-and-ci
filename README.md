@@ -4,12 +4,16 @@ Sample project: liquibase with gradle and jenkins pipeline
 Pipeline:
 
 
-node {
+
+
+ node {
+    
+    
     stage 'checkout'
     git 'https://github.com/brunooliveiramac/liquibase-and-ci.git'
     
     
-    stage 'liquibase migration'
+    stage 'liquibase migrate local'
     
     try{
         sh './gradlew migrate-local liquibasedropall liquibaseupdate'
@@ -18,4 +22,4 @@ node {
         currentBuild.result = 'FAILURE'
     }
     
-}
+ }
