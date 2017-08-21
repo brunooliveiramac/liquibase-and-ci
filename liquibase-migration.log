@@ -1,0 +1,3 @@
+INFO 8/21/17 12:55 AM: liquibase: Successfully acquired change log lock
+INFO 8/21/17 12:55 AM: liquibase: Reading from pedidovenda.DATABASECHANGELOG
+INFO 8/21/17 12:55 AM: liquibase: Successfully released change log lock

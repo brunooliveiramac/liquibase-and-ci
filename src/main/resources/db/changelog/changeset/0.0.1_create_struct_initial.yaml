@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: bruno
+      context: local
+      changes:
+        - sqlFile:
+            dbms: mssql
+            encoding: utf8
+            endDelimiter: \nGO
+            path: ../data/domain/0.0.1_create_client.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+            stripComments: false
+
+
