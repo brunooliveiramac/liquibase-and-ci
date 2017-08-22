@@ -4,8 +4,6 @@ Sample project: liquibase with gradle and jenkins pipeline
 Pipeline:
 
 
-
-
  node {
     
     

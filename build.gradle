@@ -58,12 +58,12 @@ task('migrate-local') << {
         activities {
             main {
                 changeLogFile liquibaseChangeLogFile
-                url liquibaseUrl
-                username liquibaseUsername
-                password liquibasePassword
+                url liquibaseUrlLocal
+                username liquibaseUsernameLocal
+                password liquibasePasswordLocal
                 logFile 'liquibase-migration.log'
                 logLevel 'info'
-                contexts 'local'
+                contexts 'shared, local'
             }
         }
     }
@@ -75,9 +75,9 @@ task('migrate-qa') << {
         activities {
             main {
                 changeLogFile liquibaseChangeLogFile
-                url liquibaseUrl
-                username liquibaseUsername
-                password liquibasePassword
+                url liquibaseUrlQa
+                username liquibaseUsernameQa
+                password liquibasePasswordQa
                 logFile 'liquibase-migration.log'
                 logLevel 'info'
                 contexts 'shared, qa'
