@@ -11,10 +11,10 @@ Pipeline:
     git 'https://github.com/brunooliveiramac/liquibase-and-ci.git'
     
     
-    stage 'liquibase migrate local'
+    stage 'liquibase migrate qa'
     
     try{
-        sh './gradlew migrate-local liquibasedropall liquibaseupdate'
+        sh './gradlew migrate-qa liquibasedropall liquibaseupdate'
     } catch (err){
         echo "Caught: ${err}"
         currentBuild.result = 'FAILURE'
